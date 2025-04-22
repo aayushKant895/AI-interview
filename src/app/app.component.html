@@ -1,0 +1,100 @@
+<div class="container mt-4">
+  <!-- Job Header -->
+  <div class="card p-3 mb-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <h4 class="mb-1">React developer <span class="badge badge-success ml-2">open</span></h4>
+        <div class="d-flex flex-wrap text-muted small">
+          <div class="mr-3"><i class="fa fa-briefcase"></i>💼 Full time</div>
+          <div class="mr-3"><i class="fa fa-user"></i>0 1 Openings</div>
+          <div class="mr-3"><i class="fa fa-inr"></i>💵 ₹200000 - ₹500000 Budget</div>
+          <div><i class="fa fa-clock"></i> ⏱️Permanent</div>
+        </div>
+        <div class="mt-2">
+          <span class="badge badge-light mr-2">Html/css</span>
+          <span class="badge badge-light">Javascript</span>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-primary mr-2">Job details</button>
+        <button class="btn btn-outline-primary">Search talent</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <ul class="nav nav-tabs mb-3">
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="activeTab === 'applied'" (click)="AppComponent('applied')">Applied</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="activeTab === 'ai-interview'" (click)="AppComponent('ai-interview')">AI Interview</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="activeTab === 'shortlisted'" (click)="AppComponent('shortlisted')">Shortlisted</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="activeTab === 'hired'" (click)="AppComponent('hired')">Hired</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="activeTab === 'rejected'" (click)="AppComponent('rejected')">Rejected</a>
+    </li>
+    <li class="nav-item ml-auto d-flex align-items-center">
+      <input type="text" class="form-control form-control-sm mr-2" placeholder="Search     🔍 ">
+      <button class="btn btn-outline-secondary btn-sm">Add candidate</button>
+    </li>
+  </ul>
+
+  
+  <!-- Applied Tab -->
+<div *NgIf="activeTab === 'applied'">
+  <!-- Candidate Card(s) go here -->
+</div>
+
+<!-- AI Interview Tab -->
+<div *NgIf="activeTab === 'ai-interview'">
+  <p>No candidates for AI Interview yet.</p>
+</div>
+
+<!-- Shortlisted Tab -->
+<div *NgIf="activeTab === 'shortlisted'">
+  <p>No shortlisted candidates yet.</p>
+</div>
+
+<!-- Hired Tab -->
+<div *NgIf="activeTab === 'hired'">
+  <p>No hired candidates yet.</p>
+</div>
+
+<!-- Rejected Tab -->
+<div *NgIf="activeTab === 'rejected'">
+  <p>No rejected candidates yet.</p>
+</div>
+
+  <!-- Candidate Card -->
+  <div class="card p-3 mb-3">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <img src="https://via.placeholder.com/40" class="rounded-circle mr-3" alt="Candidate">
+        <div>
+          <h6 class="mb-1">Aditya Seth</h6>
+          <div class="text-muted small">
+            <span class="mr-3"><i class="fa fa-phone"></i> 9987637636</span>
+            <span class="mr-3"><i class="fa fa-envelope"></i> shivangijain</span>
+            <span><i class="fa fa-clock"></i> 5 years</span>
+          </div>
+          <div class="text-primary mt-1">JD match score – 85%</div>
+          <div class="mt-2">
+            <span class="badge badge-pill badge-secondary mr-1">Typescript</span>
+            <span class="badge badge-pill badge-secondary mr-1">Next Js</span>
+            <span class="badge badge-pill badge-secondary">+4 Skills</span>
+          </div>
+        </div>
+      </div>
+      <div class="text-right">
+        <small class="text-muted">Applied on Feb 28, 2025</small><br>
+        <button class="btn btn-outline-primary btn-sm mt-2">Send for AI Interview</button>
+      </div>
+    </div>
+  </div>
+</div>
