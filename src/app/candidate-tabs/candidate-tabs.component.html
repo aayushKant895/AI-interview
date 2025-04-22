@@ -1,0 +1,40 @@
+<div class="container mt-4">
+    <!-- Tabs -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item" *ngFor="let tab of tabs; let i = index">
+        <a 
+          class="nav-link" 
+          [ngClass]="{ active: selectedTabIndex === i }"
+          (click)="selectTab(i)"
+          href="javascript:void(0)"
+        >
+          {{ tab }}
+        </a>
+      </li>
+    </ul>
+  
+    <!-- Tab Content -->
+    <div class="mt-4">
+      <div *ngIf="selectedTabIndex === 0">
+        <h5>Applied Candidates</h5>
+        <p>Display applied candidates here.</p>
+      </div>
+      <div *ngIf="selectedTabIndex === 1">
+        <h5>AI Interview Candidates</h5>
+        <p>Display AI Interview candidates here.</p>
+      </div>
+      <div *ngIf="selectedTabIndex === 2">
+        <h5>Shortlisted Candidates</h5>
+        <p>Display shortlisted candidates here.</p>
+      </div>
+      <div *ngIf="selectedTabIndex === 3">
+        <h5>Hired Candidates</h5>
+        <p>Display hired candidates here.</p>
+      </div>
+      <div *ngIf="selectedTabIndex === 4">
+        <h5>Rejected Candidates</h5>
+        <p>Display rejected candidates here.</p>
+      </div>
+    </div>
+  </div>
+  
